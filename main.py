@@ -34,25 +34,25 @@ def stat(exploit):
         else:
             return "`[🔴]`"
     elif exploit == "electron":
-        if jso[5]['Electron']['updated'] == True:
+        if jso[4]['Electron']['updated'] == True:
             return "`[🟢]`"
         else:
             return "`[🔴]`"
     elif exploit == "wedev":
-        if jso[6]['WeAreDevs API']['updated'] == True:
+        if jso[5]['WeAreDevs API']['updated'] == True:
             return "`[🟢]`"
         else:
             return "`[🔴]`"
     elif exploit == "fluxes":
-        if jso[8]['Fluxus']['updated'] == True:
+        if jso[7]['Fluxus']['updated'] == True:
             return "`[🟢]`"
         else:
             return "`[🔴]`"
-          
+
 def rversion():
-  r = requests.get("https://api.whatexploitsare.online/status")
-  jso = r.json()
-  return jso[12]['ROBLOX']['version']
+    r = requests.get("https://api.whatexploitsare.online/status")
+    jso = r.json()
+    return jso[11]['ROBLOX']['version']
 
 @client.command()
 async def status(ctx):
